@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">miniLotus_task2</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="PAGE1">Go to page1</string>
+    <string name="PAGE2">Go to page2</string>
+    <string name="PAGE3">Go to page3</string>
+    <string name="text3">EXAMPLE</string>
+</resources>
