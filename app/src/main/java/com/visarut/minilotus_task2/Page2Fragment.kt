@@ -7,37 +7,35 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.visarut.minilotus_task2.databinding.Page2FragmentBinding
+import com.visarut.minilotus_task2.databinding.Page3FragmentBinding
 import org.koin.android.ext.android.inject
 
 class Page2Fragment : Fragment() {
 
     val viewModel by inject<Page2ViewModel>()
 
-    companion object {
-        fun newInstance() = Page2Fragment()
-    }
 
     private lateinit var adapter: PromotionList2Adapter
 //    private lateinit var viewModel: Page2ViewModel
 
-    private var _binding: Page2FragmentBinding? = null
-    private val binding get() = _binding!!
 
     var tempList = ArrayList<PromotionItem2>()
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
+
+    private lateinit var binding: Page2FragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = Page2FragmentBinding.inflate(inflater, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.page2_fragment, container, false)
+        binding.lifecycleOwner = this
+
 
         adapter = PromotionList2Adapter(tempList)
 
