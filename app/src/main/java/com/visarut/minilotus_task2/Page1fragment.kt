@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.visarut.minilotus_task2.databinding.Page1fragmentFragmentBinding
+import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 import org.koin.android.ext.android.inject
 
 class Page1fragment : Fragment() {
@@ -25,7 +26,7 @@ class Page1fragment : Fragment() {
 
     lateinit var binding: Page1fragmentFragmentBinding
 
-    var tempList = ArrayList<PromotionItem>()
+    var tempList = ArrayList<RecycleViewBaseItem>()
 
 
     override fun onCreateView(
