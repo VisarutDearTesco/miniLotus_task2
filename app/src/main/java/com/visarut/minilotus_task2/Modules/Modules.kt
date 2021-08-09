@@ -5,6 +5,7 @@ import com.visarut.minilotus_task2.Page1fragmentViewModel
 import com.visarut.minilotus_task2.Page2ViewModel
 import com.visarut.minilotus_task2.Page3ViewModel
 import com.visarut.minilotus_task2.Repository.MiniLotusRepository
+import com.visarut.minilotus_task2.TestViewBindingViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 
 
@@ -32,9 +33,13 @@ val viewmodelModule = module {
     viewModel {
         Page3ViewModel()
     }
+
+    viewModel {
+        TestViewBindingViewModel()
+    }
 }
 
-val retrofitModule = module{
+val retrofitModule = module {
 
     single {
         Retrofit.Builder()

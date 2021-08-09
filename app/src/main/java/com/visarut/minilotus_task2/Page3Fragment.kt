@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.visarut.minilotus_task2.databinding.Page3FragmentBinding
 import org.koin.android.ext.android.inject
@@ -14,28 +15,20 @@ class Page3Fragment : Fragment() {
 
     val viewModel by inject<Page3ViewModel>()
 
-    companion object {
-        fun newInstance() = Page3Fragment()
-    }
 
     private lateinit var adapter: PromotionList3Adapter
-//    private lateinit var viewModel: Page3ViewModel
 
-    private var _binding: Page3FragmentBinding? = null
-    private val binding get() = _binding!!
 
     var tempList = ArrayList<PromotionItem3>()
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
+    private lateinit var binding: Page3FragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = Page3FragmentBinding.inflate(inflater, container, false)
+    ): View {
+        binding = DataBindingUtil.inflate(inflater, R.layout.page3_fragment, container, false)
+        binding.lifecycleOwner = this
 
         adapter = PromotionList3Adapter(tempList)
 
