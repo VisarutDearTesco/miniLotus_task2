@@ -35,7 +35,7 @@ val viewmodelModule = module {
     }
 
     viewModel {
-        TestViewBindingViewModel()
+        TestViewBindingViewModel(get())
     }
 }
 

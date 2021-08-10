@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import com.visarut.minilotus_task2.databinding.TestViewBindingFragmentBinding
+import com.visarut.minilotus_task2.epoxy.EpoxyListController
+import com.visarut.minilotus_task2.epoxy.MiniLotusListData
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TestViewBindingFragment : Fragment() {
@@ -25,9 +28,17 @@ class TestViewBindingFragment : Fragment() {
 
         binding.viewModel = viewModel
 
-        binding.addButton.setOnClickListener {
-            viewModel.updateNumber()
-        }
+
+        val epoxyListController = EpoxyListController()
+        binding.epoxyList.setController(epoxyListController)
+
+
+
+        viewModel.promotionList.observe(viewLifecycleOwner, Observer {
+
+            val miniLotus = MiniLotusListData(null, it, null)
+            epoxyListController.setData(miniLotus)
+        })
 
         return binding.root
     }
