@@ -1,5 +1,6 @@
 package com.visarut.minilotus_task2
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.util.Log
@@ -10,8 +11,11 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.OrientationHelper
+import com.visarut.minilotus_task2.databinding.LayoutSubItemBinding
 import com.visarut.minilotus_task2.databinding.Page2FragmentBinding
 import com.visarut.minilotus_task2.databinding.Page3FragmentBinding
+import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 import org.koin.android.ext.android.inject
 
 class Page2Fragment : Fragment() {
@@ -20,26 +24,28 @@ class Page2Fragment : Fragment() {
 
 
     private lateinit var adapter: PromotionList2Adapter
-//    private lateinit var viewModel: Page2ViewModel
 
 
-    var tempList = ArrayList<PromotionItem2>()
+    var tempList = ArrayList<RecycleViewBaseItem>()
 
 
-    private lateinit var binding: Page2FragmentBinding
+//    private lateinit var binding: Page2FragmentBinding
+    private lateinit var binding: LayoutSubItemBinding
 
+    @SuppressLint("WrongConstant")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding =
-            DataBindingUtil.inflate(inflater, R.layout.page2_fragment, container, false)
+            DataBindingUtil.inflate(inflater, R.layout.layout_sub_item, container, false)
         binding.lifecycleOwner = this
 
 
         adapter = PromotionList2Adapter(tempList)
 
-        val layoutManager = LinearLayoutManager(context)
+//        val layoutManager = LinearLayoutManager(context)
+        val layoutManager = LinearLayoutManager(context, OrientationHelper.HORIZONTAL, false)
 
         binding.promotionList.layoutManager = layoutManager
         binding.promotionList.adapter = adapter

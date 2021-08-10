@@ -1,4 +1,4 @@
-package com.visarut.minilotus_task2.model
+package com.visarut.minilotus_task2.recycleView
 
 data class ErrorResponse(
 	val error: Error? = null

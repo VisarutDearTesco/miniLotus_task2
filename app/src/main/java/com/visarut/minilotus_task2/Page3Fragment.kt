@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.visarut.minilotus_task2.databinding.Page3FragmentBinding
+import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 import org.koin.android.ext.android.inject
 
 class Page3Fragment : Fragment() {
@@ -19,7 +20,7 @@ class Page3Fragment : Fragment() {
     private lateinit var adapter: PromotionList3Adapter
 
 
-    var tempList = ArrayList<PromotionItem3>()
+    var tempList = ArrayList<RecycleViewBaseItem>()
 
     private lateinit var binding: Page3FragmentBinding
 

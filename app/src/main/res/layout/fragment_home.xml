@@ -43,7 +43,7 @@
                 android:id="@+id/btn4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/PAGE3" />
+                android:text="@string/PAGE4" />
         </LinearLayout>
 
 

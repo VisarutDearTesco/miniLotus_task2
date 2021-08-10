@@ -9,9 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.visarut.minilotus_task2.databinding.PromotionBannerItem2Binding
 import com.visarut.minilotus_task2.databinding.PromotionBannerItem3Binding
 import com.visarut.minilotus_task2.databinding.PromotionBannerItemBinding
+import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 
 class PromotionList3Adapter(
-    private val promotionListData: ArrayList<PromotionItem3>
+    private val promotionListData: ArrayList<RecycleViewBaseItem>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -23,7 +24,7 @@ class PromotionList3Adapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val data = promotionListData[position]
-        (holder as Promotion3ViewHolder).binding.title.text = data.title
+//        (holder as Promotion3ViewHolder).binding.title.text = data.title
 
     }
 

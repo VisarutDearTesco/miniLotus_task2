@@ -1,11 +1,7 @@
 package com.visarut.minilotus_task2.Repository
 
 import com.visarut.minilotus_task2.ApiService.ApiService
-import com.visarut.minilotus_task2.BannerData
-import com.visarut.minilotus_task2.model.BannerResponse
-import com.visarut.minilotus_task2.model.DataItem
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import com.visarut.minilotus_task2.recycleView.DataItem
 
 class MiniLotusRepository(val api : ApiService) {
 

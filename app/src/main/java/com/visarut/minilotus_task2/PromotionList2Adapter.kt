@@ -1,28 +1,37 @@
 package com.visarut.minilotus_task2
 
+import android.content.ClipData
 import android.content.ClipData.Item
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.visarut.minilotus_task2.databinding.LogoBannerBinding
 import com.visarut.minilotus_task2.databinding.PromotionBannerItem2Binding
+import com.visarut.minilotus_task2.recycleView.LogoBanner
+import com.visarut.minilotus_task2.recycleView.PromotionTypeImageText
+import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 
 
 class PromotionList2Adapter(
-    private val promotionListData: ArrayList<PromotionItem2>
+    private val promotionListData: ArrayList<RecycleViewBaseItem>
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val inflate = LayoutInflater.from(parent.context)
-        val binding: PromotionBannerItem2Binding =
-            DataBindingUtil.inflate(inflate, R.layout.promotion_banner_item2, parent, false)
-        return Promotion2ViewHolder(binding)
+//        val binding: PromotionBannerItem2Binding =
+//            DataBindingUtil.inflate(inflate, R.layout.promotion_banner_item2, parent, false)
+        val binding: LogoBannerBinding =
+            DataBindingUtil.inflate(inflate, R.layout.logo_banner, parent, false)
+        return LogoBannerViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val data = promotionListData[position]
-        (holder as Promotion2ViewHolder).binding.image.load(data.imageUrl)
+//        (holder as Promotion2ViewHolder).binding.image.load(data.imageUrl)
+        val promotionData = data as LogoBanner
+        (holder as LogoBannerViewHolder).binding.image.load(promotionData.imageUrl)
 
     }
 
@@ -46,4 +55,16 @@ class Promotion2ViewHolder(itemView: PromotionBannerItem2Binding) :
     }
 
 }
+
+class LogoBannerViewHolder(itemView : LogoBannerBinding) :
+    RecyclerView.ViewHolder(itemView.root) {
+
+    var binding: LogoBannerBinding = itemView
+
+    fun bind(item: ClipData.Item?) {
+        binding.executePendingBindings()
+    }
+}
+
+
 

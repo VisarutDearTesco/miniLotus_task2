@@ -1,5 +1,6 @@
 package com.visarut.minilotus_task2
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,7 +10,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.OrientationHelper
 import com.visarut.minilotus_task2.databinding.Page1fragmentFragmentBinding
+import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 import org.koin.android.ext.android.inject
 
 class Page1fragment : Fragment() {
@@ -21,13 +24,13 @@ class Page1fragment : Fragment() {
     }
 
     private lateinit var adapter: PromotionListAdapter
-//    private lateinit var viewModel: Page1fragmentViewModel
 
     lateinit var binding: Page1fragmentFragmentBinding
 
-    var tempList = ArrayList<PromotionItem>()
+    var tempList = ArrayList<RecycleViewBaseItem>()
 
 
+    @SuppressLint("WrongConstant")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,6 +42,7 @@ class Page1fragment : Fragment() {
 
         adapter = PromotionListAdapter(tempList)
 
+//        val layoutManager = LinearLayoutManager(context, OrientationHelper.HORIZONTAL, false)
         val layoutManager = LinearLayoutManager(context)
 
         binding.promotionList.layoutManager = layoutManager

@@ -1,5 +1,6 @@
 package com.visarut.minilotus_task2
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -10,6 +11,7 @@ class TestViewBindingViewModel : ViewModel() {
 
     fun updateNumber() {
         numberLiveData.value = numberLiveData.value?.plus(1)
+        Log.d("test","${numberLiveData.value}")
     }
 
 }

@@ -1,4 +1,4 @@
-package com.visarut.minilotus_task2.model
+package com.visarut.minilotus_task2.recycleView
 
 import com.google.gson.annotations.SerializedName
 

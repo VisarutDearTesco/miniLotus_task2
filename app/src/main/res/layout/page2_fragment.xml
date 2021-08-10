@@ -15,7 +15,8 @@
             android:id="@+id/promotion_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/promotion_banner_item2" />
+            tools:listitem="@layout/promotion_banner_item2"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

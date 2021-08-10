@@ -1,9 +1,6 @@
 package com.visarut.minilotus_task2.ApiService
 
-import com.visarut.minilotus_task2.ResBanner
-import com.visarut.minilotus_task2.model.BannerResponse
-import com.visarut.minilotus_task2.model.ErrorResponse
-import retrofit2.Call
+import com.visarut.minilotus_task2.recycleView.BannerResponse
 import retrofit2.http.GET
 import retrofit2.http.Header
 
