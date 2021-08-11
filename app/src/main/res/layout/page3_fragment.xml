@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.recycleView.feature.featureHeader.Page3Fragment">
+        tools:context=".view.feature.featureHeader.Page3Fragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/promotion_list"
