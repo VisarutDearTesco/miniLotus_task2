@@ -1,4 +1,4 @@
-package com.visarut.minilotus_task2
+package com.visarut.minilotus_task2.featurePromotion
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -10,7 +10,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.OrientationHelper
+import com.visarut.minilotus_task2.PromotionListAdapter
+import com.visarut.minilotus_task2.R
 import com.visarut.minilotus_task2.databinding.Page1fragmentFragmentBinding
 import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 import org.koin.android.ext.android.inject

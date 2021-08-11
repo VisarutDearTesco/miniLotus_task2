@@ -6,13 +6,13 @@
 
         <variable
             name="viewModel"
-            type="com.visarut.minilotus_task2.TestViewBindingViewModel" />
+            type="com.visarut.minilotus_task2.featureAddcount.TestViewBindingViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".TestViewBindingFragment">
+        tools:context=".featureAddcount.TestViewBindingFragment">
 
         <TextView
             android:id="@+id/number"

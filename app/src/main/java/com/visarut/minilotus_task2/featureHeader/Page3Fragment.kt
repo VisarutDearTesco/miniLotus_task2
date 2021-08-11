@@ -1,6 +1,5 @@
-package com.visarut.minilotus_task2
+package com.visarut.minilotus_task2.featureHeader
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.visarut.minilotus_task2.R
 import com.visarut.minilotus_task2.databinding.Page3FragmentBinding
 import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 import org.koin.android.ext.android.inject

@@ -1,4 +1,4 @@
-package com.visarut.minilotus_task2
+package com.visarut.minilotus_task2.featureBanner
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

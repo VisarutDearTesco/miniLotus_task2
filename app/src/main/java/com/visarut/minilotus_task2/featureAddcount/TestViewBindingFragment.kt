@@ -1,4 +1,4 @@
-package com.visarut.minilotus_task2
+package com.visarut.minilotus_task2.featureAddcount
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.visarut.minilotus_task2.R
 import com.visarut.minilotus_task2.databinding.TestViewBindingFragmentBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

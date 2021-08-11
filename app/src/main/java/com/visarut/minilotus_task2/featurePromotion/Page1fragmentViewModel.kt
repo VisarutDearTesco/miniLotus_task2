@@ -1,10 +1,11 @@
-package com.visarut.minilotus_task2
+package com.visarut.minilotus_task2.featurePromotion
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.visarut.minilotus_task2.Repository.MiniLotusRepository
+import com.visarut.minilotus_task2.model.FeatureBrandsItem
 import com.visarut.minilotus_task2.recycleView.*
 import kotlinx.coroutines.launch
 
@@ -18,6 +19,9 @@ class Page1fragmentViewModel(val respository : MiniLotusRepository) : ViewModel(
             val res = respository.getBanner()
             val res2 = respository.getPromoBanner()
             val logo = respository.getPromoBanner()
+            val widget = respository.getWidgetBrand()
+//            Log.d("test","widget res : ${widget}")
+            widget?.let { saveWidget(it.featureBrands as List<FeatureBrandsItem>?) }
             logo?.let{ saveLogo(it) }
             res?.let { saveBanners(it) }
             res2?.let{ savePromoBanners(it) }
@@ -68,6 +72,17 @@ class Page1fragmentViewModel(val respository : MiniLotusRepository) : ViewModel(
 
         promotionList.value = newArr
 
+    }
+
+    private fun saveWidget(widgets : List<FeatureBrandsItem>?) {
+        val newArr = ArrayList<RecycleViewBaseItem>()
+        if (widgets != null) {
+            for (item in widgets) {
+                item.image?.let { LogoBanner(it) }?.let { newArr.add(it) }
+            }
+        }
+
+        promotionList.value = newArr
     }
 
 }

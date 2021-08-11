@@ -1,14 +1,12 @@
-package com.visarut.minilotus_task2
+package com.visarut.minilotus_task2.featureHeader
 
 import android.content.ClipData
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.visarut.minilotus_task2.databinding.PromotionBannerItem2Binding
+import com.visarut.minilotus_task2.R
 import com.visarut.minilotus_task2.databinding.PromotionBannerItem3Binding
-import com.visarut.minilotus_task2.databinding.PromotionBannerItemBinding
 import com.visarut.minilotus_task2.recycleView.RecycleViewBaseItem
 
 class PromotionList3Adapter(

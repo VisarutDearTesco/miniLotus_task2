@@ -1,4 +1,4 @@
-package com.visarut.minilotus_task2
+package com.visarut.minilotus_task2.featureHome
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import com.visarut.minilotus_task2.R
 import com.visarut.minilotus_task2.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -47,6 +48,10 @@ class HomeFragment : Fragment() {
 
         binding.btn4.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_testViewBindingFragment)
+        }
+
+        binding.btn5.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_page5Fragment)
         }
 
         return binding.root

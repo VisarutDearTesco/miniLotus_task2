@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/page1fragment"
-        android:name="com.visarut.minilotus_task2.Page1fragment"
+        android:name="com.visarut.minilotus_task2.featurePromotion.Page1fragment"
         android:label="page1fragment_fragment"
         tools:layout="@layout/page1fragment_fragment" />
     <fragment
@@ -27,19 +27,26 @@
         <action
             android:id="@+id/action_homeFragment_to_testViewBindingFragment"
             app:destination="@id/testViewBindingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_page5Fragment"
+            app:destination="@id/page5Fragment" />
     </fragment>
     <fragment
         android:id="@+id/page2Fragment"
-        android:name="com.visarut.minilotus_task2.Page2Fragment"
+        android:name="com.visarut.minilotus_task2.featureBanner.Page2Fragment"
         android:label="page2_fragment"
         tools:layout="@layout/page2_fragment" />
     <fragment
         android:id="@+id/page3Fragment"
-        android:name="com.visarut.minilotus_task2.Page3Fragment"
+        android:name="com.visarut.minilotus_task2.featureHeader.Page3Fragment"
         android:label="page3_fragment"
         tools:layout="@layout/page3_fragment" />
     <fragment
         android:id="@+id/testViewBindingFragment"
-        android:name="com.visarut.minilotus_task2.TestViewBindingFragment"
+        android:name="com.visarut.minilotus_task2.featureAddcount.TestViewBindingFragment"
         android:label="TestViewBindingFragment" />
+    <fragment
+        android:id="@+id/page5Fragment"
+        android:name="com.visarut.minilotus_task2.page5.Page5Fragment"
+        android:label="Page5Fragment" />
 </navigation>

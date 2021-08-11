@@ -64,6 +64,7 @@ dependencies {
     // Epoxy
     def epoxyVersion = "4.6.2"
     implementation "com.airbnb.android:epoxy:$epoxyVersion"
+    implementation 'com.airbnb.android:epoxy-databinding:2.6.0'
     kapt("com.airbnb.android:epoxy-processor:$epoxyVersion")
 
     testImplementation 'junit:junit:4.+'

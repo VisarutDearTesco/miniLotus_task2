@@ -1,11 +1,12 @@
 package com.visarut.minilotus_task2.Modules
 
 import com.visarut.minilotus_task2.ApiService.ApiService
-import com.visarut.minilotus_task2.Page1fragmentViewModel
-import com.visarut.minilotus_task2.Page2ViewModel
-import com.visarut.minilotus_task2.Page3ViewModel
+import com.visarut.minilotus_task2.featurePromotion.Page1fragmentViewModel
+import com.visarut.minilotus_task2.featureBanner.Page2ViewModel
+import com.visarut.minilotus_task2.featureHeader.Page3ViewModel
 import com.visarut.minilotus_task2.Repository.MiniLotusRepository
-import com.visarut.minilotus_task2.TestViewBindingViewModel
+import com.visarut.minilotus_task2.featureAddcount.TestViewBindingViewModel
+import com.visarut.minilotus_task2.page5.Page5ViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 
 
@@ -36,6 +37,9 @@ val viewmodelModule = module {
 
     viewModel {
         TestViewBindingViewModel()
+    }
+    viewModel {
+        Page5ViewModel(get())
     }
 }
 
