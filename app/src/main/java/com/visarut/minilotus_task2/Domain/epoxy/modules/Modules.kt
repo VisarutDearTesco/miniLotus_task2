@@ -1,6 +1,6 @@
-package com.visarut.minilotus_task2.Domain.epoxy.Modules
+package com.visarut.minilotus_task2.Domain.epoxy.modules
 
-import com.visarut.minilotus_task2.Data.repository.ApiService.ApiService
+import com.visarut.minilotus_task2.Data.repository.apiService.ApiService
 import com.visarut.minilotus_task2.view.recycleView.feature.featurePromotion.Page1fragmentViewModel
 import com.visarut.minilotus_task2.view.recycleView.feature.featureBanner.Page2ViewModel
 import com.visarut.minilotus_task2.view.recycleView.feature.featureHeader.Page3ViewModel

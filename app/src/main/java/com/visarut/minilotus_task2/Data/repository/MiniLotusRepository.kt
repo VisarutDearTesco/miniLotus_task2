@@ -1,6 +1,6 @@
 package com.visarut.minilotus_task2.Data.repository
 
-import com.visarut.minilotus_task2.Data.repository.ApiService.ApiService
+import com.visarut.minilotus_task2.Data.repository.apiService.ApiService
 import com.visarut.minilotus_task2.Domain.epoxy.model.Data
 import com.visarut.minilotus_task2.Domain.epoxy.DataItem
 

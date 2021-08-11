@@ -1,4 +1,4 @@
-package com.visarut.minilotus_task2.Data.repository.ApiService
+package com.visarut.minilotus_task2.Data.repository.apiService
 
 import com.visarut.minilotus_task2.Domain.epoxy.model.WidgetResponse
 import com.visarut.minilotus_task2.Domain.epoxy.BannerResponse
