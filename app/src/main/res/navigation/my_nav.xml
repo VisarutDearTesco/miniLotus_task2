@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/page1fragment"
-        android:name="com.visarut.minilotus_task2.featurePromotion.Page1fragment"
+        android:name="com.visarut.minilotus_task2.view.recycleView.feature.featurePromotion.Page1fragment"
         android:label="page1fragment_fragment"
         tools:layout="@layout/page1fragment_fragment" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.visarut.minilotus_task2.HomeFragment"
+        android:name="com.visarut.minilotus_task2.view.recycleView.feature.featureHome.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -33,20 +33,20 @@
     </fragment>
     <fragment
         android:id="@+id/page2Fragment"
-        android:name="com.visarut.minilotus_task2.featureBanner.Page2Fragment"
+        android:name="com.visarut.minilotus_task2.view.recycleView.feature.featureBanner.Page2Fragment"
         android:label="page2_fragment"
         tools:layout="@layout/page2_fragment" />
     <fragment
         android:id="@+id/page3Fragment"
-        android:name="com.visarut.minilotus_task2.featureHeader.Page3Fragment"
+        android:name="com.visarut.minilotus_task2.view.recycleView.feature.featureHeader.Page3Fragment"
         android:label="page3_fragment"
         tools:layout="@layout/page3_fragment" />
     <fragment
         android:id="@+id/testViewBindingFragment"
-        android:name="com.visarut.minilotus_task2.featureAddcount.TestViewBindingFragment"
+        android:name="com.visarut.minilotus_task2.view.recycleView.feature.featureAddcount.TestViewBindingFragment"
         android:label="TestViewBindingFragment" />
     <fragment
         android:id="@+id/page5Fragment"
-        android:name="com.visarut.minilotus_task2.page5.Page5Fragment"
+        android:name="com.visarut.minilotus_task2.view.recycleView.feature.featureHomeWithEpoxy.page5.Page5Fragment"
         android:label="Page5Fragment" />
 </navigation>

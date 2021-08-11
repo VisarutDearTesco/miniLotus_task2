@@ -14,9 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniLotus_task2"
-        android:name=".MyApp"
+        android:name=".view.recycleView.MyApp"
         >
-        <activity android:name=".HomeActivity">
+        <activity android:name=".view.recycleView.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

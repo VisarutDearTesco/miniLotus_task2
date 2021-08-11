@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.visarut.minilotus_task2.page5.Page5ViewModel" />
+            type="com.visarut.minilotus_task2.view.recycleView.feature.featureHomeWithEpoxy.page5.Page5ViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
