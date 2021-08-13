@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.visarut.minilotus_task2.R
 import com.visarut.minilotus_task2.databinding.Page5FragmentBinding
-import com.visarut.minilotus_task2.domain.epoxy.model.MiniLotusLisData
+import com.visarut.minilotus_task2.domain.epoxy.model.MiniLotusListData
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class Page5Fragment : Fragment() {
@@ -33,7 +33,7 @@ class Page5Fragment : Fragment() {
 
         viewModel.promotionList.observe(viewLifecycleOwner, Observer {
 
-            val minilotus = MiniLotusLisData(viewModel.widgetList,viewModel.bannerList,viewModel.promotionList)
+            val minilotus = MiniLotusListData(viewModel.widgetList,viewModel.bannerList,viewModel.promotionList)
             epoxyListController.setData(minilotus)
 
         })

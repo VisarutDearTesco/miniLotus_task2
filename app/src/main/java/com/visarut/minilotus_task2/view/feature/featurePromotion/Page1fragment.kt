@@ -36,7 +36,7 @@ class Page1fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        return inflater.inflate(R.layout.page1fragment_fragment, container, false)
+
         binding =
             DataBindingUtil.inflate(inflater, R.layout.page1fragment_fragment, container, false)
         binding.lifecycleOwner = this

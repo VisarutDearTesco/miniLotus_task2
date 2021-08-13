@@ -7,9 +7,16 @@ import com.visarut.minilotus_task2.data.repository.MiniLotusRepository
 import com.visarut.minilotus_task2.domain.epoxy.BannersItem
 import com.visarut.minilotus_task2.domain.epoxy.DataItem
 import com.visarut.minilotus_task2.domain.epoxy.model.FeatureBrandsItem
+import com.visarut.minilotus_task2.domain.usecase.GetBannerUseCase
+import com.visarut.minilotus_task2.domain.usecase.GetPromoBannerUseCase
+import com.visarut.minilotus_task2.domain.usecase.GetWidgetBrandUseCase
 import kotlinx.coroutines.launch
 
-class Page5ViewModel(val respository : MiniLotusRepository) : ViewModel() {
+class Page5ViewModel(
+    val getWidgetBrandUseCase : GetWidgetBrandUseCase,
+    val getBannerUseCase: GetBannerUseCase,
+    val getPromoBannerUseCase: GetPromoBannerUseCase
+) : ViewModel() {
 
     val widgetList = MutableLiveData(ArrayList<FeatureBrandsItem>())
     val bannerList =  MutableLiveData(ArrayList<BannersItem>())
@@ -19,15 +26,12 @@ class Page5ViewModel(val respository : MiniLotusRepository) : ViewModel() {
     init{
 
         viewModelScope.launch {
-            val res = respository.getBanner()
-            val res2 = respository.getPromoBanner()
-            val logo = respository.getPromoBanner()
-            val widget = respository.getWidgetBrand()
-//            Log.d("test","widget res : ${widget}")
+            val widget = getWidgetBrandUseCase.invoke()
+            val banner = getBannerUseCase.invoke()
+            val promoBanner = getPromoBannerUseCase.invoke()
             widget?.let { saveWidget(it.featureBrands as List<FeatureBrandsItem>?) }
-            logo?.let{ saveLogo(it) }
-            res?.let { saveBanners(it) }
-            res2?.let{ savePromoBanners(it) }
+            banner?.let { saveBanners(it) }
+            promoBanner?.let{ savePromoBanners(it) }
         }
 
     }
@@ -76,7 +80,6 @@ class Page5ViewModel(val respository : MiniLotusRepository) : ViewModel() {
         val newArr = ArrayList<FeatureBrandsItem>()
         if (widgets != null) {
             for (item in widgets) {
-//                item.image?.let { LogoBanner(it) }?.let { newArr.add(it) }
                 newArr.add(FeatureBrandsItem(item.image,item.url))
             }
         }

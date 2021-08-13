@@ -52,6 +52,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_page5Fragment)
         }
 
+        binding.btn6.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_saveNameFragment)
+        }
+
         return binding.root
 
     }

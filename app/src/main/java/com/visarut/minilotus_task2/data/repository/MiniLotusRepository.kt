@@ -1,5 +1,6 @@
 package com.visarut.minilotus_task2.data.repository
 
+import android.content.Context
 import com.visarut.minilotus_task2.data.repository.apiService.ApiService
 import com.visarut.minilotus_task2.domain.epoxy.model.Data
 import com.visarut.minilotus_task2.domain.epoxy.DataItem
@@ -24,5 +25,6 @@ class MiniLotusRepository(val api : ApiService) {
 //        Log.d("test","widget : ${res.data}")
         return res.data
     }
+
 
 }

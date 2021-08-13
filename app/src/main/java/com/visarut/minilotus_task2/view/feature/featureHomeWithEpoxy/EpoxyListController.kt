@@ -5,12 +5,12 @@ import com.airbnb.epoxy.carousel
 import com.visarut.minilotus_task2.BannerBindingModel_
 import com.visarut.minilotus_task2.LogoBindingModel_
 import com.visarut.minilotus_task2.banner
-import com.visarut.minilotus_task2.domain.epoxy.model.MiniLotusLisData
+import com.visarut.minilotus_task2.domain.epoxy.model.MiniLotusListData
 import com.visarut.minilotus_task2.header
 
-class EpoxyListController : TypedEpoxyController<MiniLotusLisData>() {
+class EpoxyListController : TypedEpoxyController<MiniLotusListData>() {
 
-    override fun buildModels(data: MiniLotusLisData?) {
+    override fun buildModels(data: MiniLotusListData?) {
 
         val widgetMap = data?.widgetList?.value?.mapIndexed{ index, s ->
 //            Log.d("test", "index: ${index} , s : ${cast_s.imageUrl}")
