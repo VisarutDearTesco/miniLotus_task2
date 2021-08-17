@@ -1,10 +1,7 @@
 package com.visarut.minilotus_task2.domain.di
 
 import com.visarut.minilotus_task2.data.repository.MiniLotusRepository
-import com.visarut.minilotus_task2.domain.usecase.GetBannerUseCase
-import com.visarut.minilotus_task2.domain.usecase.GetPromoBannerUseCase
-import com.visarut.minilotus_task2.domain.usecase.GetSavedNameUseCase
-import com.visarut.minilotus_task2.domain.usecase.GetWidgetBrandUseCase
+import com.visarut.minilotus_task2.domain.usecase.*
 import org.koin.dsl.module
 
 
@@ -25,6 +22,10 @@ val useCaseModule = module {
 
     single {
         GetSavedNameUseCase(get())
+    }
+
+    single {
+        PostSavedNameUseCase(get())
     }
 
 

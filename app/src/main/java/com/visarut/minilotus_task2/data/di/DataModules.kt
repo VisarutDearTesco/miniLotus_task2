@@ -1,6 +1,7 @@
 package com.visarut.minilotus_task2.data.di
 
 import com.visarut.minilotus_task2.data.repository.MiniLotusRepository
+import com.visarut.minilotus_task2.data.repository.SharedPrefRepository
 import com.visarut.minilotus_task2.data.repository.apiService.ApiService
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -11,6 +12,10 @@ val appModule = module {
     // factory - defines a factory( creates new instance every time )
     single {
         MiniLotusRepository(get())
+    }
+
+    single{
+        SharedPrefRepository(get())
     }
 }
 

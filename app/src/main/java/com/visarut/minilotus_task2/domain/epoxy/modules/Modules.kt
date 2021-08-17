@@ -8,6 +8,7 @@ import com.visarut.minilotus_task2.data.repository.MiniLotusRepository
 import com.visarut.minilotus_task2.domain.usecase.GetWidgetBrandUseCase
 import com.visarut.minilotus_task2.view.feature.featureAddcount.TestViewBindingViewModel
 import com.visarut.minilotus_task2.view.feature.featureHomeWithEpoxy.Page5ViewModel
+import com.visarut.minilotus_task2.view.feature.featureSaveName.SaveNameViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 
 
@@ -31,6 +32,10 @@ val viewmodelModule = module {
     }
     viewModel {
         Page5ViewModel(get(),get(),get())
+    }
+
+    viewModel {
+        SaveNameViewModel(get(),get())
     }
 }
 

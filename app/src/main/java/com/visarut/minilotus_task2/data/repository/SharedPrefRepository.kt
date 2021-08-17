@@ -1,6 +1,7 @@
 package com.visarut.minilotus_task2.data.repository
 
 import android.content.SharedPreferences
+import android.text.Editable
 
 class SharedPrefRepository(
     val sharedPref : SharedPreferences
@@ -11,11 +12,11 @@ class SharedPrefRepository(
         return savedString
     }
 
-    fun SaveData(data: String?){
+    fun SaveData(data: Editable){
         val editor = sharedPref?.edit()
 
         editor?.apply {
-            putString("STRING_KEY", data)
+            putString("STRING_KEY", data.toString())
         }?.apply()
 
     }
