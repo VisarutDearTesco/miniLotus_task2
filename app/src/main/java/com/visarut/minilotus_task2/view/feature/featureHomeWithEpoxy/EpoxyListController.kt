@@ -8,7 +8,19 @@ import com.visarut.minilotus_task2.banner
 import com.visarut.minilotus_task2.domain.epoxy.model.MiniLotusListData
 import com.visarut.minilotus_task2.header
 
-class EpoxyListController : TypedEpoxyController<MiniLotusListData>() {
+class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
+
+    private var callback: EpoxyListController.AddOnItemSelected? = null
+
+    interface AddOnItemSelected {
+        fun onClickBanner(url : String?)
+        fun onClickLogo()
+    }
+
+    fun setItemSelectListener(callback : AddOnItemSelected){
+        this.callback = callback
+    }
+
 
     override fun buildModels(data: MiniLotusListData?) {
 
@@ -18,20 +30,6 @@ class EpoxyListController : TypedEpoxyController<MiniLotusListData>() {
                 id("logo" + index)
                 url(s.image)
 
-            }
-        }
-
-        val bannerMap = data?.bannerList?.value?.mapIndexed { index, bannersItem ->
-            BannerBindingModel_().apply {
-                id("banner" + index)
-                bannerUrl(bannersItem.image)
-            }
-        }
-
-        val promoMap = data?.promotionList?.value?.mapIndexed { index, bannersItem ->
-            BannerBindingModel_().apply {
-                id("promotion" + index )
-                bannerUrl(bannersItem.image)
             }
         }
 
@@ -59,13 +57,9 @@ class EpoxyListController : TypedEpoxyController<MiniLotusListData>() {
             banner {
                 id("bannerItem" + index )
                 bannerUrl(bannersItem.image)
-            }
-        }
-
-        data?.promotionList?.value?.forEachIndexed { index, bannersItem ->
-            banner {
-                id("bannerItem" + index )
-                bannerUrl(bannersItem.image)
+                onClickBannerItem { _ ->
+                    this@EpoxyListController.callback?.onClickBanner(bannersItem.image)
+                }
             }
         }
 

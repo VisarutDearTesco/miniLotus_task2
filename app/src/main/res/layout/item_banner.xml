@@ -5,7 +5,12 @@
     <data>
         <variable
             name="bannerUrl"
-            type="String" />
+            type="String"
+            />
+        <variable
+            name="onClickBannerItem"
+            type="android.view.View.OnClickListener" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +28,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/img_1"
-            app:imageUrl="@{bannerUrl}"/>
+            app:imageUrl="@{bannerUrl}"
+            android:onClick="@{onClickBannerItem}"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

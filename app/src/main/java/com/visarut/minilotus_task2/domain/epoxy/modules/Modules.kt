@@ -9,6 +9,7 @@ import com.visarut.minilotus_task2.domain.usecase.GetWidgetBrandUseCase
 import com.visarut.minilotus_task2.view.feature.featureAddcount.TestViewBindingViewModel
 import com.visarut.minilotus_task2.view.feature.featureHomeWithEpoxy.Page5ViewModel
 import com.visarut.minilotus_task2.view.feature.featureSaveName.SaveNameViewModel
+import com.visarut.minilotus_task2.view.feature.featureSingleBanner.SingleBannerViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 
 
@@ -36,6 +37,10 @@ val viewmodelModule = module {
 
     viewModel {
         SaveNameViewModel(get(),get())
+    }
+
+    viewModel {
+        SingleBannerViewModel()
     }
 }
 

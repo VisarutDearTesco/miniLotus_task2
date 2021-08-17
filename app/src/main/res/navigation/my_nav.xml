@@ -51,10 +51,25 @@
     <fragment
         android:id="@+id/page5Fragment"
         android:name="com.visarut.minilotus_task2.view.feature.featureHomeWithEpoxy.Page5Fragment"
-        android:label="Page5Fragment" />
+        android:label="Page5Fragment" >
+        <action
+            android:id="@+id/action_page5Fragment_to_singleBannerFragment"
+            app:destination="@id/singleBannerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/saveNameFragment"
         android:name="com.visarut.minilotus_task2.view.feature.featureSaveName.SaveNameFragment"
         android:label="save_name_fragment"
         tools:layout="@layout/save_name_fragment" />
+    <fragment
+        android:id="@+id/singleBannerFragment"
+        android:name="com.visarut.minilotus_task2.view.feature.featureSingleBanner.SingleBannerFragment"
+        android:label="single_banner_fragment"
+        tools:layout="@layout/single_banner_fragment" >
+        <argument
+            android:name="image"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
 </navigation>
