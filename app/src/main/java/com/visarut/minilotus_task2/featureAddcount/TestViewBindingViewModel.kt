@@ -11,7 +11,6 @@ class TestViewBindingViewModel : ViewModel() {
 
     fun updateNumber() {
         numberLiveData.value = numberLiveData.value?.plus(1)
-        Log.d("test","${numberLiveData.value}")
     }
 
 }
