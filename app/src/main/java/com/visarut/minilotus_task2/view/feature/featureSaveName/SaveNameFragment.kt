@@ -29,7 +29,7 @@ class SaveNameFragment : Fragment() {
 
         binding.btnSaveText.setOnClickListener {
             viewModel.saveName(binding.etText.text)
-            Toast.makeText(context,"Saved Text!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,viewModel.toastMsg,Toast.LENGTH_SHORT).show()
         }
 
         return binding.root

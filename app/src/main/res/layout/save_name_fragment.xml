@@ -19,7 +19,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_above="@+id/btn_saveText"
-            android:hint="Type something here"
+            android:hint="Type National ID here"
             android:text="@{String.valueOf(viewModel.name)}"
             android:layout_centerInParent="true" />
 
