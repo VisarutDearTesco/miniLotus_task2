@@ -18,10 +18,3 @@ fun bindImageUrl(view : ImageView, url: String?){
         view.load(it)
     }
 }
-
-//@BindingAdapter("imageBannerUrl")
-//fun bindImageBannerUrl(view : ImageView, url: String?){
-//    url?.let{
-//        view.load(it)
-//    }
-//}

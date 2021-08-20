@@ -1,5 +1,6 @@
 package com.visarut.minilotus_task2.data.di
 
+import com.visarut.minilotus_task2.data.repository.FoodDeliveryRepository
 import com.visarut.minilotus_task2.data.repository.MiniLotusRepository
 import com.visarut.minilotus_task2.data.repository.SharedPrefRepository
 import com.visarut.minilotus_task2.data.repository.apiService.ApiService
@@ -16,6 +17,10 @@ val appModule = module {
 
     single{
         SharedPrefRepository(get())
+    }
+
+    single {
+        FoodDeliveryRepository()
     }
 }
 

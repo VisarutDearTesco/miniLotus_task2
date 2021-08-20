@@ -2,11 +2,8 @@ package com.visarut.minilotus_task2.view.feature.featureHomeWithEpoxy
 
 import com.airbnb.epoxy.TypedEpoxyController
 import com.airbnb.epoxy.carousel
-import com.visarut.minilotus_task2.BannerBindingModel_
-import com.visarut.minilotus_task2.LogoBindingModel_
-import com.visarut.minilotus_task2.banner
+import com.visarut.minilotus_task2.*
 import com.visarut.minilotus_task2.domain.epoxy.model.MiniLotusListData
-import com.visarut.minilotus_task2.header
 
 class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
 
@@ -33,6 +30,15 @@ class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
             }
         }
 
+//        val foodMap = data?.widgetList?.value?.mapIndexed{ index, _ ->
+//            FoodcategoryBindingModel_().apply {
+//                id("food"+index)
+//            }
+//        }
+
+
+
+
         header {
             id("Brand1")
             title("Brand")
@@ -48,10 +54,22 @@ class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
             }
         }
 
+//        carousel {
+//            id("food_carousel")
+//            foodMap?.let{
+//                models(
+//                    it
+//                )
+//            }
+//        }
+
+
+
         header {
             id("Banner1")
             title("Banner")
         }
+
 
         data?.promotionList?.value?.forEachIndexed { index, bannersItem ->
             banner {
@@ -74,6 +92,9 @@ class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
                 bannerUrl(bannersItem.image)
             }
         }
+
+
+
     }
 
 }

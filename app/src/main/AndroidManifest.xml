@@ -16,7 +16,9 @@
         android:theme="@style/Theme.MiniLotus_task2"
         android:name=".MyApp"
         >
-        <activity android:name=".HomeActivity">
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

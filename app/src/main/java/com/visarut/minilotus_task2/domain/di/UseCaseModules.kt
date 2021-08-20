@@ -28,5 +28,9 @@ val useCaseModule = module {
         PostSavedNameUseCase(get())
     }
 
+    single {
+        GetFoodCategoryUseCase(get())
+    }
+
 
 }

@@ -32,5 +32,6 @@
             android:onClick="@{onClickBannerItem}"
             />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

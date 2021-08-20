@@ -7,6 +7,7 @@ import com.visarut.minilotus_task2.view.feature.featureHeader.Page3ViewModel
 import com.visarut.minilotus_task2.data.repository.MiniLotusRepository
 import com.visarut.minilotus_task2.domain.usecase.GetWidgetBrandUseCase
 import com.visarut.minilotus_task2.view.feature.featureAddcount.TestViewBindingViewModel
+import com.visarut.minilotus_task2.view.feature.featureDeliveryHome.DeliveryHomePageViewModel
 import com.visarut.minilotus_task2.view.feature.featureHomeWithEpoxy.Page5ViewModel
 import com.visarut.minilotus_task2.view.feature.featureSaveName.SaveNameViewModel
 import com.visarut.minilotus_task2.view.feature.featureSingleBanner.SingleBannerViewModel
@@ -41,6 +42,10 @@ val viewmodelModule = module {
 
     viewModel {
         SingleBannerViewModel()
+    }
+
+    viewModel {
+        DeliveryHomePageViewModel(get())
     }
 }
 
