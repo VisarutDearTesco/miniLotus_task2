@@ -61,7 +61,7 @@ class DeliveryHomeController() : TypedEpoxyController<FoodDeliveryData>() {
         header {
             id("featureRestaurants")
             title("Featured restaurants")
-            size(16F)
+            size(20F)
         }
 
         carousel {
@@ -76,7 +76,7 @@ class DeliveryHomeController() : TypedEpoxyController<FoodDeliveryData>() {
         header {
             id("popular")
             title("Popular items")
-            size(16F)
+            size(20F)
         }
 
         carousel {
