@@ -33,7 +33,7 @@ class DeliveryHomePageFragment : Fragment() {
         binding.epoxyList.setController(deliveryHomeController)
 
         viewModel.foodCategoryList.observe(viewLifecycleOwner, Observer {
-            val foodDelivery = FoodDeliveryData(viewModel.foodCategoryList)
+            val foodDelivery = FoodDeliveryData(viewModel.foodCategoryList,null)
             deliveryHomeController.setData(foodDelivery)
         })
 

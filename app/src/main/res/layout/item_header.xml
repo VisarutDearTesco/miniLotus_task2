@@ -7,6 +7,9 @@
         <variable
             name="title"
             type="String" />
+        <variable
+            name="size"
+            type="Float" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,6 +21,7 @@
         <TextView
             android:id="@+id/title"
             app:name="@{title}"
+            app:size="@{size}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
@@ -25,7 +29,6 @@
             android:adjustViewBounds="true"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="20dp"
             android:text="123"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

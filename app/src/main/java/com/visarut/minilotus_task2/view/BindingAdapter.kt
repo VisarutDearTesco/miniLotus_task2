@@ -12,6 +12,14 @@ fun bindText(view: TextView, name: String?){
     }
 }
 
+@BindingAdapter("size")
+fun bindTextSize(view: TextView, size: Float?){
+    size?.let{
+        view.textSize = it
+    }
+}
+
+
 @BindingAdapter("imageUrl")
 fun bindImageUrl(view : ImageView, url: String?){
     url?.let{
