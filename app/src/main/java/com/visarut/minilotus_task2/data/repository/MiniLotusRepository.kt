@@ -22,7 +22,6 @@ class MiniLotusRepository(val api : ApiService) {
 
     suspend fun getWidgetBrand(): Data? {
         val res = api.fetchWidgetBrand(apikey,acceptLang)
-//        Log.d("test","widget : ${res.data}")
         return res.data
     }
 

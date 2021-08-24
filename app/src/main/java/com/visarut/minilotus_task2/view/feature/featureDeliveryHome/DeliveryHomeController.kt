@@ -14,7 +14,7 @@ class DeliveryHomeController() : TypedEpoxyController<FoodDeliveryData>() {
 
 
         val foodMap = data?.foodCategoryList?.value?.mapIndexed{ index, s ->
-            Log.d("test","index")
+//            Log.d("test","index")
             FoodcategoryBindingModel_().apply {
                 id("food"+index)
                 foodUrl(s.imageUrl)

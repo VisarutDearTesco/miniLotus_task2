@@ -1,5 +1,6 @@
 package com.visarut.minilotus_task2.view.feature.featureHomeWithEpoxy
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -67,10 +68,8 @@ class Page5ViewModel(
         for (item in banners) {
             item?.banners!!.forEach {
                 newArr.add(BannersItem(it?.image.toString()))
-//                subArr.add(LogoBanner(it?.image.toString()))
             }
         }
-//        Log.d("test", "${subArr.toString()}")
 
         promotionList.value = newArr
 
@@ -80,10 +79,10 @@ class Page5ViewModel(
         val newArr = ArrayList<FeatureBrandsItem>()
         if (widgets != null) {
             for (item in widgets) {
+                Log.d("test","${item.image}")
                 newArr.add(FeatureBrandsItem(item.image,item.url))
             }
         }
-
         widgetList.value = newArr
     }
 }

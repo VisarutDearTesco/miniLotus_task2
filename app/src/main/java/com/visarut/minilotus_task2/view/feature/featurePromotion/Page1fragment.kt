@@ -62,6 +62,5 @@ class Page1fragment : Fragment() {
             tempList.addAll(it)
             adapter.notifyDataSetChanged()
         })
-        Log.d("test", tempList.toString())
     }
 }

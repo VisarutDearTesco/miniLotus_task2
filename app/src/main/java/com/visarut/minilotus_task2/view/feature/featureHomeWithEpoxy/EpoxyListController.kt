@@ -29,20 +29,10 @@ class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
 
             }
         }
-
-//        val foodMap = data?.widgetList?.value?.mapIndexed{ index, _ ->
-//            FoodcategoryBindingModel_().apply {
-//                id("food"+index)
-//            }
-//        }
-
-
-
-
         header {
             id("Brand1")
             title("Brand")
-
+            size(22F)
         }
 
         carousel {
@@ -54,20 +44,11 @@ class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
             }
         }
 
-//        carousel {
-//            id("food_carousel")
-//            foodMap?.let{
-//                models(
-//                    it
-//                )
-//            }
-//        }
-
-
 
         header {
             id("Banner1")
             title("Banner")
+            size(22F)
         }
 
 
@@ -84,6 +65,7 @@ class EpoxyListController() : TypedEpoxyController<MiniLotusListData>() {
         header {
             id("Promotion1")
             title("Promotion")
+            size(22F)
         }
 
         data?.promotionList?.value?.forEachIndexed { index, bannersItem ->

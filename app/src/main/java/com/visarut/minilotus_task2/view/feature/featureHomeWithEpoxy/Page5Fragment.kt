@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.visarut.minilotus_task2.R
 import com.visarut.minilotus_task2.databinding.Page5FragmentBinding
 import com.visarut.minilotus_task2.domain.epoxy.model.MiniLotusListData
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import androidx.lifecycle.Observer
 
 class Page5Fragment : Fragment(), EpoxyListController.AddOnItemSelected {
 
