@@ -43,7 +43,6 @@ class Page1fragment : Fragment() {
 
         adapter = PromotionListAdapter(tempList)
 
-//        val layoutManager = LinearLayoutManager(context, OrientationHelper.HORIZONTAL, false)
         val layoutManager = LinearLayoutManager(context)
 
         binding.promotionList.layoutManager = layoutManager

@@ -20,14 +20,14 @@ class Page1fragmentViewModel(val respository : MiniLotusRepository) : ViewModel(
     init{
 
         viewModelScope.launch {
-            val res = respository.getBanner()
+//            val res = respository.getBanner()
             val res2 = respository.getPromoBanner()
             val logo = respository.getPromoBanner()
-            val widget = respository.getWidgetBrand()
+//            val widget = respository.getWidgetBrand()
 //            Log.d("test","widget res : ${widget}")
-            widget?.let { saveWidget(it.featureBrands as List<FeatureBrandsItem>?) }
+//            widget?.let { saveWidget(it.featureBrands as List<FeatureBrandsItem>?) }
             logo?.let{ saveLogo(it) }
-            res?.let { saveBanners(it) }
+//            res?.let { saveBanners(it) }
             res2?.let{ savePromoBanners(it) }
         }
 
